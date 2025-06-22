@@ -1,1 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>오스월드의 기록실</title>
+  <style>
+    body {
+      background-color: #1c1c1c;
+      color: #e0e0e0;
+      font-family: 'Courier New', Courier, monospace;
+      padding: 40px;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .clickable {
+      width: 100%;
+      cursor: pointer;
+      border: 3px solid #555;
+      margin-bottom: 30px;
+    }
+    .log {
+      background: #2a2a2a;
+      padding: 20px;
+      border-radius: 8px;
+      border-left: 5px solid #888;
+      white-space: pre-wrap;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>오스월드의 관찰 기록</h1>
+    <p>이미지를 클릭하면 해당 사물에 대한 기록이 표시됩니다.</p>
+
+    <img src="https://via.placeholder.com/600x200.png?text=Coffee+Cup" alt="Coffee" class="clickable" id="coffee">
+    <img src="https://via.placeholder.com/600x200.png?text=Scattered+Documents" alt="Documents" class="clickable" id="papers">
+    <img src="https://via.placeholder.com/600x200.png?text=Observation+Log" alt="Observation" class="clickable" id="observation">
+
+    <div class="log" id="log"></div>
+  </div>
+
+  <script>
+    const log = document.getElementById('log');
+
+    const messages = {
+      coffee: "피곤해보여 커피를 내밀자 단칼에 거절했다. 역시 그도 이런 음침한 나를 싫어하고 있는 걸까.",
+      papers: "기숙사 침대 주변이 늘 난장판이다. 손에 잡히는 대로 메모하고, 종이를 아무렇게나 접어 끼워 넣고, 사용할 도구를 책 위에 올려두며, 필요하면 발로 밀어서 공간을 만든다.",
+      observation: "어느날은 관찰 일지를 적는 나를 관찰하는 오스월드를 확인할 수 있었다. 그 이후로는... 서로의 시선이 교차하는 순간이 종종 찾아왔다."
+    };
+
+    document.querySelectorAll('.clickable').forEach(img => {
+      img.addEventListener('click', () => {
+        const id = img.id;
+        log.textContent = messages[id];
+        log.style.display = 'block';
+      });
+    });
+  </script>
+</body>
+</html>
 
