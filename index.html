@@ -11,14 +11,16 @@
       padding: 40px;
     }
     .container {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
     }
     .clickable {
       width: 100%;
+      max-width: 500px;
       cursor: pointer;
-      border: 3px solid #555;
-      margin-bottom: 30px;
+      border: 2px solid #444;
+      margin: 15px 0;
+      display: block;
     }
     .log {
       background: #2a2a2a;
@@ -27,17 +29,21 @@
       border-left: 5px solid #888;
       white-space: pre-wrap;
       display: none;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>오스월드의 관찰 기록</h1>
-    <p>이미지를 클릭하면 해당 사물에 대한 기록이 표시됩니다.</p>
+    <p>각 이미지를 클릭해 기록을 열람하세요.</p>
 
-    <img src="https://via.placeholder.com/600x200.png?text=Coffee+Cup" alt="Coffee" class="clickable" id="coffee">
-    <img src="https://via.placeholder.com/600x200.png?text=Scattered+Documents" alt="Documents" class="clickable" id="papers">
-    <img src="https://via.placeholder.com/600x200.png?text=Observation+Log" alt="Observation" class="clickable" id="observation">
+    <img src="1.png" alt="침대" class="clickable" id="bed">
+    <img src="2.png" alt="책상" class="clickable" id="desk">
+    <img src="3.png" alt="기차역" class="clickable" id="station">
+    <img src="4.png" alt="커피" class="clickable" id="coffee">
+    <img src="5.png" alt="종이 더미" class="clickable" id="papers">
+    <img src="6.png" alt="병" class="clickable" id="bottle">
 
     <div class="log" id="log"></div>
   </div>
@@ -46,9 +52,12 @@
     const log = document.getElementById('log');
 
     const messages = {
+      bed: "기숙사 침대 주변이 늘 난장판이다. 손에 잡히는 대로 메모하고, 종이를 아무렇게나 접어 끼워 넣고, 사용할 도구를 책 위에 올려두며, 필요하면 발로 밀어서 공간을 만든다.",
+      desk: "작성한 실험 기록 하나만큼은 강박적으로 정리되어 있다. 넘버링, 날짜, 성공률, 재실험 여부까지 모든 게 기록된다.",
+      station: "오스월드가 기숙사에 처음 들어왔을 때, 나는 그를 처음 마주쳤다. 낡은 트렁크와 병들, 고서들로 가득한 짐과 함께였다.",
       coffee: "피곤해보여 커피를 내밀자 단칼에 거절했다. 역시 그도 이런 음침한 나를 싫어하고 있는 걸까.",
-      papers: "기숙사 침대 주변이 늘 난장판이다. 손에 잡히는 대로 메모하고, 종이를 아무렇게나 접어 끼워 넣고, 사용할 도구를 책 위에 올려두며, 필요하면 발로 밀어서 공간을 만든다.",
-      observation: "어느날은 관찰 일지를 적는 나를 관찰하는 오스월드를 확인할 수 있었다. 그 이후로는... 서로의 시선이 교차하는 순간이 종종 찾아왔다."
+      papers: "그는 손에 잡히는 대로 메모하고 종이를 아무렇게나 접어 끼워 넣는다. 정돈은 없다. 하지만 정밀한 내용은 그 속에 숨어 있다.",
+      bottle: "출처를 알 수 없는 액체가 담긴 병. 그의 식사는 알약과 오트밀 비스킷, 그리고 이 병에 들어있는 무언가로 대체된다."
     };
 
     document.querySelectorAll('.clickable').forEach(img => {
@@ -61,4 +70,3 @@
   </script>
 </body>
 </html>
-
