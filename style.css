@@ -1,69 +1,61 @@
-@font-face {
-  font-family: 'DungGeunMo';
-  src: url('./fonts/DungGeunMo.ttf') format('truetype');
-}
-
-body {
-  background-color: black;
-  color: #ccc;
-  font-family: 'DungGeunMo', sans-serif;
-  font-size: 20px;
-  text-align: center;
-  padding: 20px;
-}
-
-h1 {
-  font-size: 36px;
-  color: #f0f0f0;
-  letter-spacing: 2px;
-  margin-bottom: 10px;
-}
-
-#description {
-  background-color: #111;
-  border: 2px dashed #444;
-  color: #9f9;
-  font-size: 18px;
-  white-space: pre-line;
-}
-
-
+/* 배경과 텍스트 설정 */
 body {
   background-color: black;
   color: #eee;
   font-family: 'DungGeunMo', sans-serif;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
+/* 방 전체 이미지 설정 (2배 확대) */
 .room {
   position: relative;
-  width: 169px;
-  height: 130px;
+  width: 338px;     /* 169 * 2 */
+  height: 260px;    /* 130 * 2 */
   margin: 30px auto;
+  border: 2px solid #444; /* 개발 시 위치 확인용, 필요 없으면 삭제 */
 }
 
 .room img {
   width: 100%;
+  height: 100%;
   display: block;
 }
 
+/* 핫스팟 공통 설정 */
 .hotspot {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 0, 0, 0.3); /* 개발 중 위치 확인용 */
   cursor: pointer;
-  background-color: rgba(255, 0, 0, 0); /* 개발 중에는 0.2로 테스트 */
 }
 
-/* 아래는 대략적인 위치. 픽셀 정확하게 조정하세요 */
-#knife { top: 100px; left: 35px; }
-#note  { top: 75px; left: 105px; }
-#photo { top: 12px;  left: 125px; }
+/* 핫스팟 위치 (2배로 조정) */
+#knife {
+  top: 200px;
+  left: 70px;
+}
 
+#note {
+  top: 150px;
+  left: 210px;
+}
+
+#photo {
+  top: 24px;
+  left: 250px;
+}
+
+/* 메세지 출력 박스 */
 #message-box {
   margin-top: 20px;
-  padding: 10px;
-  font-size: 14px;
+  padding: 12px;
+  font-size: 16px;
   background: #111;
   border-top: 1px solid #555;
+  width: 360px;
+  margin-left: auto;
+  margin-right: auto;
 }
