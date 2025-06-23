@@ -1,4 +1,3 @@
-/* 배경과 텍스트 설정 */
 body {
   background-color: black;
   color: #eee;
@@ -8,13 +7,12 @@ body {
   padding: 0;
 }
 
-/* 방 전체 이미지 설정 (2배 확대) */
 .room {
   position: relative;
-  width: 338px;     /* 169 * 2 */
-  height: 260px;    /* 130 * 2 */
+  width: 338px;  /* 169 * 2 */
+  height: 260px; /* 130 * 2 */
   margin: 30px auto;
-  border: 2px solid #444; /* 개발 시 위치 확인용, 필요 없으면 삭제 */
+  border: 2px solid #444;
 }
 
 .room img {
@@ -23,16 +21,15 @@ body {
   display: block;
 }
 
-/* 핫스팟 공통 설정 */
 .hotspot {
   position: absolute;
   width: 40px;
   height: 40px;
-  background-color: rgba(255, 0, 0, 0.3); /* 개발 중 위치 확인용 */
+  background-color: rgba(255, 0, 0, 0.3); /* 확인용, 완성 후 지워도 됨 */
   cursor: pointer;
 }
 
-/* 핫스팟 위치 (2배로 조정) */
+/* 핫스팟 위치 */
 #knife {
   top: 200px;
   left: 70px;
@@ -48,7 +45,6 @@ body {
   left: 250px;
 }
 
-/* 메세지 출력 박스 */
 #message-box {
   margin-top: 20px;
   padding: 12px;
@@ -58,4 +54,8 @@ body {
   width: 360px;
   margin-left: auto;
   margin-right: auto;
+}
+function showMessage(text) {
+  const box = document.getElementById('message-box');
+  box.textContent = text;
 }
