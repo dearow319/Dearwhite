@@ -1,3 +1,4 @@
 function showDescription(text) {
-  document.getElementById('description-box').textContent = text;
+  const box = document.getElementById('description-box');
+  box.textContent = '▶ ' + text;
 }
