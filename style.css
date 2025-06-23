@@ -26,3 +26,44 @@ h1 {
   font-size: 18px;
   white-space: pre-line;
 }
+
+
+body {
+  background-color: black;
+  color: #eee;
+  font-family: 'DungGeunMo', sans-serif;
+  text-align: center;
+}
+
+.room {
+  position: relative;
+  width: 169px;
+  height: 130px;
+  margin: 30px auto;
+}
+
+.room img {
+  width: 100%;
+  display: block;
+}
+
+.hotspot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  background-color: rgba(255, 0, 0, 0); /* 개발 중에는 0.2로 테스트 */
+}
+
+/* 아래는 대략적인 위치. 픽셀 정확하게 조정하세요 */
+#knife { top: 100px; left: 35px; }
+#note  { top: 75px; left: 105px; }
+#photo { top: 12px;  left: 125px; }
+
+#message-box {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 14px;
+  background: #111;
+  border-top: 1px solid #555;
+}
