@@ -4,5 +4,25 @@
 }
 
 body {
+  background-color: black;
+  color: #ccc;
   font-family: 'DungGeunMo', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  color: #f0f0f0;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+#description {
+  background-color: #111;
+  border: 2px dashed #444;
+  color: #9f9;
+  font-size: 18px;
+  white-space: pre-line;
 }
