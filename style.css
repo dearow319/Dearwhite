@@ -1,7 +1,7 @@
 body {
   background-color: black;
   color: #eee;
-  font-family: 'DungGeunMo', sans-serif;
+  font-family: sans-serif;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -25,11 +25,11 @@ body {
   position: absolute;
   width: 40px;
   height: 40px;
-  background-color: rgba(255, 0, 0, 0.3); /* 확인용, 완성 후 지워도 됨 */
+  background-color: rgba(255, 0, 0, 0.3); /* 임시로 영역 보이게 */
   cursor: pointer;
 }
 
-/* 핫스팟 위치 */
+/* 클릭 영역 위치 조정 */
 #knife {
   top: 200px;
   left: 70px;
@@ -55,7 +55,4 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-function showMessage(text) {
-  const box = document.getElementById('message-box');
-  box.textContent = text;
-}
+
