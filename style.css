@@ -16,22 +16,27 @@ body {
 }
 
 .keywords {
-  margin-top: 20px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
 }
 
-.keywords span {
-  font-size: 20px;
-  margin: 10px;
-  padding: 5px 10px;
-  cursor: pointer;
-  background-color: #333;
+.keywords button {
+  font-size: 18px;
+  padding: 8px 16px;
+  background-color: #222;
+  color: #f2f2f2;
+  border: 1px solid #555;
   border-radius: 5px;
-  display: inline-block;
-  transition: background-color 0.3s;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s;
 }
 
-.keywords span:hover {
-  background-color: #555;
+.keywords button:hover {
+  background-color: #444;
+  transform: scale(1.05);
 }
 
 #description-box {
