@@ -1,52 +1,52 @@
 body {
-  background-color: #111;
+  background-color: black;
   color: #eee;
   font-family: 'DungGeunMo', sans-serif;
   text-align: center;
-  margin: 0;
-  padding: 0;
+  padding: 20px;
 }
 
-.room img {
-  width: 100%;
-  max-width: 600px;
-  display: block;
-  margin: 0 auto;
-  border-bottom: 2px solid #444;
+.room-image {
+  max-width: 100%;
+  height: auto;
+  border: 3px solid #333;
 }
 
 .keywords {
-  margin: 20px auto;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
+  margin-top: 20px;
 }
 
 .keywords button {
-  font-size: 18px;
-  padding: 8px 16px;
   background-color: #222;
-  color: #f2f2f2;
-  border: 1px solid #555;
-  border-radius: 5px;
+  color: #0ff;
+  border: 1px solid #0ff;
+  padding: 8px 16px;
+  margin: 6px;
+  font-size: 18px;
   cursor: pointer;
-  transition: background-color 0.2s, transform 0.2s;
+  transition: background-color 0.3s;
 }
 
 .keywords button:hover {
-  background-color: #444;
-  transform: scale(1.05);
+  background-color: #0ff;
+  color: #000;
 }
 
 #description-box {
-  margin-top: 25px;
+  margin-top: 20px;
+  font-size: 20px;
+  color: #fff;
+  background-color: #111;
   padding: 15px;
-  background-color: #222;
-  color: #9f9;
-  border: 1px dashed #666;
+  border: 2px dashed #444;
   width: 80%;
-  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
+  min-height: 60px;
+}
+
+.instruction {
+  margin-top: 10px;
+  color: #ccc;
+  font-size: 16px;
 }
