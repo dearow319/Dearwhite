@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>오스월드의 방</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="room">
-    <img src="room.png" alt="오스월드의 방">
-
-    <!-- 클릭 가능한 영역들 -->
-    <div class="hotspot" id="knife" onclick="showMessage('바닥의 피와 칼... 단서일까?')"></div>
-    <div class="hotspot" id="note" onclick="showMessage('노트에는 미처 쓰지 못한 문장이 남아 있다.')"></div>
-    <div class="hotspot" id="photo" onclick="showMessage('사진 속 그림자가 낯설지 않다.')"></div>
+    <img src="room.png" alt="오스월드의 방" />
   </div>
 
-  <div id="message-box">무언가 클릭해보세요.</div>
+  <div class="keywords">
+    <span onclick="showDescription('책장엔 아무도 손대지 않은 고서들이 정렬되어 있다.')">책</span>
+    <span onclick="showDescription('약병엔 의심스러운 액체가 담겨 있다.')">약품</span>
+    <span onclick="showDescription('침대 위에는 누군가가 읽다 만 책이 있다.')">침대</span>
+    <span onclick="showDescription('고양이는 당신을 빤히 쳐다보고 있다.')">고양이</span>
+  </div>
+
+  <div id="description-box">아래 단어를 눌러 보세요.</div>
 
   <script src="script.js"></script>
 </body>
