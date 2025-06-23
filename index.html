@@ -10,3 +10,26 @@
   <p>이제 GitHub Pages로 배포해 보세요!</p>
 </body>
 </html>
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>오스월드의 방</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="room">
+    <img src="room.png" alt="오스월드의 방">
+
+    <div class="hotspot" id="knife" onclick="showMessage('바닥의 피와 칼... 단서일까?')"></div>
+    <div class="hotspot" id="note" onclick="showMessage('노트에는 미처 쓰지 못한 문장이 남아 있다.')"></div>
+    <div class="hotspot" id="photo" onclick="showMessage('사진 속 그림자가 낯설지 않다.')"></div>
+  </div>
+
+  <div id="message-box">무언가 클릭해보세요.</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
