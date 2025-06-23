@@ -1,58 +1,47 @@
 body {
-  background-color: black;
+  background-color: #111;
   color: #eee;
-  font-family: sans-serif;
+  font-family: 'DungGeunMo', sans-serif;
   text-align: center;
   margin: 0;
   padding: 0;
 }
 
-.room {
-  position: relative;
-  width: 338px;  /* 169 * 2 */
-  height: 260px; /* 130 * 2 */
-  margin: 30px auto;
-  border: 2px solid #444;
-}
-
 .room img {
   width: 100%;
-  height: 100%;
+  max-width: 600px;
   display: block;
+  margin: 0 auto;
+  border-bottom: 2px solid #444;
 }
 
-.hotspot {
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 0, 0, 0.3); /* 임시로 영역 보이게 */
-  cursor: pointer;
-}
-
-/* 클릭 영역 위치 조정 */
-#knife {
-  top: 200px;
-  left: 70px;
-}
-
-#note {
-  top: 150px;
-  left: 210px;
-}
-
-#photo {
-  top: 24px;
-  left: 250px;
-}
-
-#message-box {
+.keywords {
   margin-top: 20px;
-  padding: 12px;
-  font-size: 16px;
-  background: #111;
-  border-top: 1px solid #555;
-  width: 360px;
+}
+
+.keywords span {
+  font-size: 20px;
+  margin: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: #333;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.keywords span:hover {
+  background-color: #555;
+}
+
+#description-box {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #222;
+  color: #9f9;
+  border: 1px dashed #666;
+  width: 80%;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
-
