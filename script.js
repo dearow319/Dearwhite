@@ -1,4 +1,3 @@
-function showMessage(text) {
-  const box = document.getElementById('message-box');
-  box.textContent = text;
+function showDescription(text) {
+  document.getElementById('description-box').textContent = text;
 }
